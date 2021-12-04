@@ -2,7 +2,9 @@ package com.atguigu.spring;
 
 
 import com.atguigu.spring.aop.HelloService;
+import com.atguigu.spring.bean.Cat;
 import com.atguigu.spring.bean.Hello;
+import com.atguigu.spring.bean.Person;
 import com.atguigu.spring.circle.A;
 import com.atguigu.spring.config.AopOpenConfig;
 import com.atguigu.spring.config.MainConfig;
@@ -25,6 +27,8 @@ public class AnnotationMainTest {
 		ApplicationContext applicationContext =
 				new AnnotationConfigApplicationContext(MainConfig.class);
 
+		Person bean = applicationContext.getBean(Person.class);
+		System.out.println(bean);
 
 //		Hello bean = applicationContext.getBean(Hello.class);
 //		Hello bea2 = applicationContext.getBean(Hello.class);
@@ -64,7 +68,10 @@ public class AnnotationMainTest {
 //			System.out.println(name);
 //		}
 
-
+//
+//		/**
+//		 * 原型模式给你2个不一样的，如果是单例就是一样的
+//		 */
 //		Cat bean1 = applicationContext.getBean(Cat.class);
 //
 //		Cat bean2 = applicationContext.getBean(Cat.class);

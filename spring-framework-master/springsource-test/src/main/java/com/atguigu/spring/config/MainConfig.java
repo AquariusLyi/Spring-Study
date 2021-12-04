@@ -3,6 +3,7 @@ package com.atguigu.spring.config;
 
 import com.atguigu.spring.aop.HelloService;
 import com.atguigu.spring.bean.Cat;
+import com.atguigu.spring.bean.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
@@ -34,12 +35,12 @@ public class MainConfig {
 //		applicationEventPublisher.publishEvent();
 	}
 
-//	@Bean(initMethod = "")
-//	public Person person(){
-//		Person person = new Person();
-//		person.setName("李四");
-//		return person;
-//	}
+	@Bean(initMethod = "")
+	public Person person(){
+		Person person = new Person();
+		person.setName("李四");
+		return person;
+	}
 
 
 	/**

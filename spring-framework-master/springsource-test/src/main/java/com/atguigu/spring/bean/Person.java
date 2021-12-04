@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
  *
  */
 //@Component
-public class Person implements ApplicationContextAware, MessageSourceAware {
+public class  Person implements ApplicationContextAware, MessageSourceAware {
 
 //	@Autowired
 	ApplicationContext context;  //可以要到ioc容器
@@ -63,7 +63,7 @@ public class Person implements ApplicationContextAware, MessageSourceAware {
 
 
 	//
-//	@Lookup  //去容器中找。@Bean的这种方式注册的Person @Lookup不生效
+//	@Lookup  //去容器中找。@Bean的这种方式注册的Person @Lookup不生效  所以直接在person加上@Component，不要以@bean的方式注入
 	public Cat getCat() {
 		return cat;
 	}
