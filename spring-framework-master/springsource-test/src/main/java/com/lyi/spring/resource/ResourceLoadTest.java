@@ -13,6 +13,9 @@ public class ResourceLoadTest {
 	 *
 	 */
 	public static void main(String[] args) {
+		String s = "&nbsp";
+		String s1 = s.replaceAll("[\\s\\u00A0]", "2");
+
 		ResourceLoader resourceLoader = new DefaultResourceLoader();
 
 		Resource fileResource1 = resourceLoader.getResource("D:/Users/chenming673/Documents/spark.txt");
